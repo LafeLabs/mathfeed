@@ -16,9 +16,9 @@
         fclose($file);  //close file
     }
     
-    $files1 = scandir("php/");
+    $phpfiles = scandir("php/");
 
-    foreach ($files1 as $value) {
+    foreach ($phpfiles as $value) {
         if($value != "." &&$value != ".."){
             $filebase = explode(".",$value)[0].".php";
             $code = file_get_contents("php/".$value);
